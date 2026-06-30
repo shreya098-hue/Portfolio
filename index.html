@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shreya Singh — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#home" class="nav-logo">SS.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-btn" id="themeBtn" title="Toggle theme">
+            🌙
+          </button>
+        </li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 0.75rem">
+        <button
+          class="theme-btn"
+          id="themeBtnMobile"
+          title="Toggle theme"
+          style="display: none"
+        >
+          🌙
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <span class="mobile-close" id="mobileClose">✕</span>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-blob blob1"></div>
+        <div class="hero-blob blob2"></div>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-left reveal">
+          <span class="hero-tag">Open to Opportunities ✦</span>
+          <h1>Hi, I'm<br /><span class="name">Shreya Singh</span></h1>
+          <div class="type-wrap">
+            <span id="typeText"></span><span class="type-cursor"></span>
+          </div>
+          <p class="hero-sub">
+            Crafting modern web experiences with React &amp; clean code. BSc CS
+            student at Delhi University, currently interning at Softsira
+            Technologies.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+          </div>
+        </div>
+        <div class="hero-card reveal reveal-delay-2">
+          <div class="avatar">S</div>
+          <h3>Shreya Singh</h3>
+          <div class="role">Delhi University · 2nd Year BSc CS</div>
+          <div class="social-row">
+            <a
+              href="https://github.com/shreya098-hue"
+              target="_blank"
+              class="social-btn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shreya-singh-019217329/"
+              target="_blank"
+              class="social-btn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-box">
+              <div class="num" id="repoCount">...</div>
+              <div class="lbl">GitHub Repos</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">90%</div>
+              <div class="lbl">Class X Score</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">SIH</div>
+              <div class="lbl">Hackathon</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">3+</div>
+              <div class="lbl">Projects Built</div>
+            </div>
+          </div>
+          <div class="gh-badge">
+            <span class="gh-dot"></span> Fetching GitHub activity...
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="alt-bg">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="section-label">About Me</p>
+            <h2 class="section-title">
+              Developer who loves<br />clean interfaces
+            </h2>
+            <p>
+              I'm Shreya Singh, a 2nd year BSc Computer Science student at the
+              University of Delhi. I love turning ideas into clean, responsive
+              web interfaces that actually work beautifully.
+            </p>
+            <p>
+              Currently interning at Softsira Technologies as a Frontend
+              Developer — building React components, integrating APIs, and
+              contributing to real products used by real users.
+            </p>
+            <p>
+              Outside code, I volunteer with my college's cultural & technical
+              society and enjoy hackathons, open-source, and exploring UI/UX
+              design.
+            </p>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <p class="section-label" style="margin-bottom: 1rem">Education</p>
+            <ul class="edu-list">
+              <li class="edu-item">
+                <div class="edu-icon">🎓</div>
+                <div>
+                  <strong
+                    >BSc (Prog) Computer Science
+                    <span class="edu-badge">Pursuing</span></strong
+                  >
+                  <span>University of Delhi · 2024 – 2028</span>
+                </div>
+              </li>
+              <li class="edu-item">
+                <div class="edu-icon">📚</div>
+                <div>
+                  <strong
+                    >Class XII — CBSE <span class="edu-badge">80%</span></strong
+                  >
+                  <span>R.S.K.V govt School, Delhi · 2024</span>
+                </div>
+              </li>
+              <li class="edu-item">
+                <div class="edu-icon">📖</div>
+                <div>
+                  <strong
+                    >Class X — CBSE <span class="edu-badge">90%</span></strong
+                  >
+                  <span>R.S.K.V govt School, Delhi · 2022</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-inner">
+        <p class="section-label reveal">Technical Skills</p>
+        <h2 class="section-title reveal">What I work with</h2>
+        <p class="section-desc reveal">
+          Languages, frameworks, and concepts I use to build complete web
+          experiences.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h4>Programming Languages</h4>
+            <div class="skill-tags">
+              <span class="tag">C++</span><span class="tag">JavaScript</span
+              ><span class="tag">Python</span
+              ><span class="tag">Java (basic)</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h4>Frontend Development</h4>
+            <div class="skill-tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span
+              ><span class="tag">JavaScript</span><span class="tag">React</span
+              ><span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                />
+              </svg>
+            </div>
+            <h4>Coursework</h4>
+            <div class="skill-tags">
+              <span class="tag">DSA</span><span class="tag">OOPs</span
+              ><span class="tag">DBMS</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-bars reveal" style="margin-top: 2.5rem">
+          <div class="bar-item">
+            <span class="bar-label">React / JS</span>
+            <div class="bar-track">
+              <div class="bar-fill" data-width="82"></div>
+            </div>
+            <span class="bar-pct">82%</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label">Python</span>
+            <div class="bar-track">
+              <div class="bar-fill" data-width="72"></div>
+            </div>
+            <span class="bar-pct">72%</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label">C++</span>
+            <div class="bar-track">
+              <div class="bar-fill" data-width="68"></div>
+            </div>
+            <span class="bar-pct">68%</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label">HTML / CSS</span>
+            <div class="bar-track">
+              <div class="bar-fill" data-width="88"></div>
+            </div>
+            <span class="bar-pct">88%</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-label">DSA</span>
+            <div class="bar-track">
+              <div class="bar-fill" data-width="65"></div>
+            </div>
+            <span class="bar-pct">65%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="alt-bg">
+      <div class="section-inner">
+        <p class="section-label reveal">Work</p>
+        <h2 class="section-title reveal">Experience</h2>
+        <p class="section-desc reveal">
+          Real internship — real code, real users.
+        </p>
+        <div class="exp-card reveal">
+          <div class="exp-logo">S</div>
+          <div class="exp-content">
+            <div class="exp-badge">
+              <span
+                style="
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background: var(--teal-m);
+                  display: inline-block;
+                "
+              ></span>
+              Currently Working
+            </div>
+            <h3>Frontend Developer Intern</h3>
+            <p class="exp-meta">
+              <span>Softsira Technologies</span> · Delhi NCR · Dec 2024 –
+              Present
+            </p>
+            <ul class="exp-points">
+              <li>
+                Building reusable UI components using React.js and Tailwind CSS
+                for client-facing web applications.
+              </li>
+              <li>
+                Collaborating with backend developers to integrate REST APIs and
+                improve application performance.
+              </li>
+              <li>
+                Participating in code reviews and contributing to a shared
+                component library across projects.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-inner">
+        <p class="section-label reveal">My Work</p>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-desc reveal">
+          Full-stack apps, frontend projects, and Python tools.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card featured reveal">
+            <div class="project-number">01</div>
+            <h3>TodoList App — MERN Stack</h3>
+            <p>
+              Full-stack To-Do app with authentication, MongoDB persistence, and
+              clean React UI. Add, edit, delete, and mark tasks complete.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">MongoDB</span
+              ><span class="stack-tag">Express</span
+              ><span class="stack-tag">React</span
+              ><span class="stack-tag">Node.js</span
+              ><span class="stack-tag">Tailwind</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/shreya098-hue"
+                target="_blank"
+                class="project-link"
+                >GitHub
+                <svg viewBox="0 0 24 24">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" /></svg></a>
+            </div>
+          </div>
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-number">02</div>
+            <h3>Weather App</h3>
+            <p>
+              Real-time weather with OpenWeatherMap API. Current conditions,
+              5-day forecast, and geolocation auto-detect.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">React</span
+              ><span class="stack-tag">JavaScript</span
+              ><span class="stack-tag">Tailwind</span
+              ><span class="stack-tag">API</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/shreya098-hue"
+                target="_blank"
+                class="project-link"
+                >GitHub
+                <svg viewBox="0 0 24 24">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" /></svg></a>
+            </div>
+          </div>
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-number">03</div>
+            <h3>Python Mini Projects</h3>
+            <p>
+              Desktop GUI apps with Tkinter: Image Slider with auto-play
+              controls + Notepad clone with full file I/O.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span
+              ><span class="stack-tag">Tkinter</span
+              ><span class="stack-tag">GUI</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/shreya098-hue"
+                target="_blank"
+                class="project-link"
+                >GitHub
+                <svg viewBox="0 0 24 24">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" /></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIVE GITHUB REPOS -->
+        <div style="margin-top: 3rem" class="reveal">
+          <p class="section-label" style="margin-bottom: 0.5rem">
+            Live from GitHub
+          </p>
+          <h3
+            style="
+              font-family: &quot;Clash Display&quot;, sans-serif;
+              font-size: 1.3rem;
+              margin-bottom: 0.5rem;
+              font-weight: 700;
+            "
+          >
+            Latest Repositories
+          </h3>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--muted);
+              margin-bottom: 1.25rem;
+            "
+          >
+            Fetched live from
+            <a
+              href="https://github.com/shreya098-hue"
+              target="_blank"
+              style="color: var(--teal); text-decoration: none"
+              >@shreya098-hue</a
+            >
+          </p>
+          <div class="gh-repos" id="ghRepos">
+            <div class="loading-repos">
+              ⟳ Loading repositories from GitHub...
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HACKATHON -->
+    <section id="hackathon" class="alt-bg">
+      <div class="section-inner">
+        <p class="section-label reveal">Beyond Code</p>
+        <h2 class="section-title reveal">Achievements &amp; Activities</h2>
+        <p class="section-desc reveal">
+          Hackathons, volunteering, and community involvement.
+        </p>
+        <div class="hack-grid">
+          <div class="hack-card reveal">
+            <div class="hack-icon">🏆</div>
+            <div>
+              <h3>Smart India Hackathon (SIH)</h3>
+              <p>
+                Represented college team in India's largest hackathon. Built a
+                working prototype in a 36-hour sprint.
+              </p>
+              <span class="hack-badge">National Level</span>
+            </div>
+          </div>
+          <div class="hack-card reveal reveal-delay-1">
+            <div class="hack-icon">🤝</div>
+            <div>
+              <h3>College Volunteer Society</h3>
+              <p>
+                Active volunteer managing college events, fests, workshops, and
+                inter-college competitions.
+              </p>
+              <span class="hack-badge">Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-inner">
+        <div class="contact-wrap">
+          <div class="contact-info reveal">
+            <p class="section-label">Say Hello</p>
+            <h2 class="section-title">Let's Connect</h2>
+            <p>
+              Open to internship opportunities, freelance projects, or just a
+              friendly chat about tech and design. Reach out anytime!
+            </p>
+            <a href="mailto:shreyasingh31106@gmail.com" class="btn btn-primary"
+              >Send an Email ↗</a
+            >
+          </div>
+          <div class="contact-links reveal reveal-delay-1">
+            <a href="mailto:shreyasingh31106@gmail.com" class="contact-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              shreyasingh31106@gmail.com
+              <span class="cl-label">Email</span>
+            </a>
+            <a href="tel:+918826714817" class="contact-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91A16 16 0 0 0 15.09 16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              +91 8826714817
+              <span class="cl-label">Phone</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shreya-singh-019217329/"
+              target="_blank"
+              class="contact-link"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              linkedin.com/in/shreya-singh-019217329
+              <span class="cl-label">LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/shreya098-hue"
+              target="_blank"
+              class="contact-link"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              github.com/shreya098-hue
+              <span class="cl-label">GitHub</span>
+            </a>
+            <a class="contact-link" style="cursor: default">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Delhi, India
+              <span class="cl-label">Location</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Designed &amp; built by <span>Shreya Singh</span> ·
+        <span id="year"></span> · All links are live ✦
+      </p>
+    </footer>
+
+    <button
+      class="scroll-top"
+      id="scrollTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ↑
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
